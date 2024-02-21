@@ -1,10 +1,9 @@
 
 provider "aws" {
   region = "us-east-1"
-  access_key = "AKIA2UC3DQZZKHCZMUZG"
-  secret_key = "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"
+  access_key = "AKIATRPTJT322MBTQQNT"
+  secret_key = "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"
 }
-
 resource "aws_instance" "demo-server" {
     ami = "ami-0c7217cdde317cfec"
     instance_type = "t2.micro"
