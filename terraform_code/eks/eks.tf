@@ -1,3 +1,4 @@
+
 resource "aws_iam_role" "master" {
   name = "ed-eks-master"
 
@@ -32,7 +33,7 @@ resource "aws_iam_role_policy_attachment" "AmazonEKSVPCResourceController" {
   role       = aws_iam_role.master.name
 }
 
-resource "aws_iam_role" "worker" {
+resource "aws_iam_role" "worker"  {
   name = "ed-eks-worker"
 
   assume_role_policy = <<POLICY
@@ -49,6 +50,7 @@ resource "aws_iam_role" "worker" {
   ]
 }
 POLICY
+
 }
 
 resource "aws_iam_policy" "autoscaler" {
