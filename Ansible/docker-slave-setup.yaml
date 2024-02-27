@@ -1,5 +1,5 @@
 ---
-- hosts: jenkins-slave
+- hosts: jenkins-slave 
   become: true
   tasks: 
   - name: update ubuntu repo and cache
@@ -24,7 +24,7 @@
       remote_src: yes
 
   - name: install docker
-     apt:
+    apt:
       name: docker.io
       state: present
 
@@ -41,5 +41,9 @@
   - name: start docker on boot time
     service:
      name: docker
-     enabled: yes                    
+     enabled: yes 
+
+
+
+                        
      
